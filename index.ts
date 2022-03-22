@@ -22,7 +22,7 @@ client.on('ready', () => {
 
 client.on('messageCreate', (message) => {
 
-    if (message.content.includes(`@<847637326204764202>`)) {
+    if (message.content.includes(`<@847637326204764202>`)) {
         message.reply({ embeds: [moderationEmbed] });
     }
 

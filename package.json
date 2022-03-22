@@ -1,0 +1,23 @@
+{
+  "name": "cataclysmbot",
+  "version": "1.0.1",
+  "description": "Oficial Cataclysm discord bot built in TypeScript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -w --skipLibCheck",
+    "start": "tsc && node index.js"
+  },
+  "keywords": [],
+  "author": "WalberthLopes",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.5.0",
+    "dotenv": "^10.0.0",
+    "tsc": "^2.0.3",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}

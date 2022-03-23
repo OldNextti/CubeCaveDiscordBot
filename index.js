@@ -24,7 +24,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = __importStar(require("discord.js"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const noMention_1 = require("./moderation/noMention");
 dotenv_1.default.config();
 const client = new discord_js_1.default.Client({
     intents: [
@@ -39,10 +38,5 @@ client.on('ready', () => {
     if (handler.default)
         handler = handler.default;
     handler(client);
-});
-client.on('messageCreate', (message) => {
-    if (message.content.includes(`@<847637326204764202>`)) {
-        message.reply({ embeds: [noMention_1.moderationEmbed] });
-    }
 });
 client.login(process.env.TOKEN);

@@ -1,6 +1,5 @@
 import DiscordJS, { Intents } from 'discord.js'
 import dotenv from 'dotenv'
-import { moderationEmbed } from './moderation/noMention'
 dotenv.config()
 
 const client = new DiscordJS.Client({
@@ -18,14 +17,6 @@ client.on('ready', () => {
     if (handler.default) handler = handler.default
 
     handler(client)
-})
-
-client.on('messageCreate', (message) => {
-
-    if (message.content.includes(`<@847637326204764202>`)) {
-        message.reply({ embeds: [moderationEmbed] });
-    }
-
 })
 
 client.login(process.env.TOKEN)
